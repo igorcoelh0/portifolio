@@ -14,6 +14,7 @@ body {
     background: #021124;
     overflow-y: auto;
     width: 300px;
+    transition: all ease-in-out 0.5s;
     padding: 0 15px;
     z-index: 9999;
 }
@@ -125,4 +126,47 @@ section#home div#arraste{
 section#home div#arraste a{
     text-decoration: none;
     color: #fff;
+}
+
+i.menu-mobile{
+    position: fixed;
+    color: #fff;
+    background-color: #252c90;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 45px;
+    height: 45px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-nav-active{
+    overflow: hidden;
+}
+
+.menu-nav-active #header{
+    left: 0;
+}
+@media (max-width: 1024px) {
+    #header{
+        left: -300px;
+    }
+    i.menu-mobile{
+        display: flex;
+    }
+    section#home h2{
+        font-size: 3.5rem;
+    }
+    section#home span#subtitle{
+        margin-right: 0;
+        font-size: 1rem;
+    }
+    #main{
+        margin-left: 0;
+    }
 }
